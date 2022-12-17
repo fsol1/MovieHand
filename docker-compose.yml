@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  movies:
+    build: ./server
+    command: python manage.py runserver 0.0.0.0:8000
+    container_name: movies
+    volumes:
+      - ./server/:/usr/src/app/
+    ports:
+      - 8009:8000
+    env_file:
+      - ./server/.env.dev
+    depends_on:
+      - movies-db
+
+  movies-db:
+    container_name: movies-db
+    image: postgres:14-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=movies
+      - POSTGRES_PASSWORD=movies
+      - POSTGRES_DB=movies_dev
+
+  movies-client:
+    build:
+      context: ./client
+    command: yarn start
+    container_name: movies-client
+    depends_on:
+      - movies
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - 3001:3000
+    stdin_open: true
+    volumes:
+      - ./client:/usr/src/app
+
+volumes:
+  postgres_data:

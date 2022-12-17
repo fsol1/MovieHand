@@ -1,0 +1,30 @@
+Moviehand: Social media to share movies by the mean of "hands" which are a selection of five movies
+
+    Key features:
+        - Connect to the website through oauth2
+        - Profile has a picture, favorite movie and a bio
+        - Search bar for movies from tmdb
+        - Create/read/update/delete hands with movies from tmdb
+        - Hands can have a name, description and comments
+        - Hands can be liked, shared, and have tags
+        - Main feed of hands which loads with pagination
+
+    Other features:
+        - Trending hands
+        - Hands can be filtered through tags
+        - Recommend other hands or movies depending on tags/director/actors
+        - Generate a phone-sized image of the five movies with logo of the site ...
+
+    Pages:
+        - Main page for unlogged users with trending hands
+        - Main page for logged users with customized feed
+        - Log in/register pages and redirect to main page on log out
+        - Profile page with pfp, bio, created and liked hands
+        - Create page of a hand with tmdb search bar and form for title, description and tags
+        - Read page of a hand with title, description, tags, likes, comments and related hands
+        - Update/delete page of a hand
+        - Movie page with popular hands it's in
+
+    With all of it being contanerized (docker), orchastreted (docker-compose), test driven (pytest and cypress)
+    and deployed (heruko ?).
+
