@@ -3,6 +3,8 @@ MovieHand is a social media platform for movie enthusiasts to share and discover
 
 **Note:** The production code may differ slightly from the codebase provided here. In order for the app to work properly, API keys must be set in certain files.
 
+**Note:** If you don't want to sign up (login: testuser, password: test123').
+
 ## Key Features
 
 - Leverages the TMDB API to provide a rich selection of movies to share and discover
