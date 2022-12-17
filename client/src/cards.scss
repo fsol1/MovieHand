@@ -1,0 +1,63 @@
+@mixin fan($count, $angle) {
+  $offset: $angle / 2;
+  @for $i from 1 through $count {
+    $increment: $angle / ($count + 1);
+    div:nth-child(#{$i}) {
+      transform: translate(-50%, -50%) rotate(-$offset + $increment * $i);
+    }
+  }
+}
+
+.cards {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  @include fan(5, 50deg);
+
+  &:hover {
+    @include fan(5, 60deg);
+  }
+}
+
+.card {
+  background: white;
+  background-size: cover;
+  height: 240px;
+  width: 165px;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 0 0 30px transparentize(black, 0.8);
+  left: 50%;
+  top: 50%;
+  transform-origin: center 175%;
+  transition: transform 0.3s ease-out;
+}
+
+.bcard {
+  background: white;
+  background-size: cover;
+  height: calc(240px * 1.1);
+  width: calc(165px * 1.1);
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 0 0 30px transparentize(black, 0.8);
+  left: 50%;
+  top: 50%;
+  transform-origin: center 200%;
+  transition: transform 0.3s ease-out;
+}
+
+.bbcard {
+  background: white;
+  background-size: cover;
+  height: calc(240px * 1.2);
+  width: calc(165px * 1.2);
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 0 0 30px transparentize(black, 0.8);
+  left: 50%;
+  top: 50%;
+  transform-origin: center 225%;
+  transition: transform 0.3s ease-out;
+}
