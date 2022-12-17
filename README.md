@@ -1,36 +1,36 @@
-# MovieHand
+# MovieHand - A Social Media Platform for Movie Enthusiasts
 MovieHand is a social media platform for movie enthusiasts to share and discover films. It was built using Django and React and follows a test-driven development approach. The app features a modern user interface designed with Tailwind CSS and utilizes a Postgres database hosted on Heroku. MovieHand is deployed using Docker and Docker Compose, ensuring efficient scalability. With its Instagram-like experience, it's the perfect destination for discovering and sharing movies with the community.
 
-## Features
+## Key Features
 
-- Leverages the tmdb api
-- Post sets of 5 movies
-- User profiles along with likes, follows and comments
-- Explore page to find posts and users
+- Leverages the TMDB API to provide a rich selection of movies to share and discover
+- Allows users to create posts of sets of 5 movies
+- Features user profiles with likes, follows, and comments
+- Explore page for finding new posts and users to follow
 
-## Stack
+## Technology Stack
 
 ### Frontend :
 
-- React fot the UI
-- Tailwind for css styling
-- Axios to fetch data
-- Cypress for tests
+- React for building the user interface
+- Tailwind CSS for styling
+- Axios for fetching data from the backend API
+- Cypress for testing
 
 ### Backend : 
 
-- Django and Django Rest Framework for REST apis
+- Django and Django Rest Framework for building REST APIs
 - JWT for authentication
-- Pytests for tests
+- Pytest for testing
 
-## Docker
+## Docker Usage
 
-Execute this command at the root to build the docker images:
+To build the Docker images, run the following command at the root of the project:
 ```
 $ docker-compose build
 ```
 
-To run the containers:
+To start the containers, run:
 ```
 $ docker-compose up -d
 ```
@@ -40,9 +40,9 @@ To bring down the containers:
 $ docker-compose down
 ```
 
-## Tests and code quality
+## Testing and code quality
 
-Execute this command at the root to run the pytest tests with coverage:
+To run the Pytest tests with coverage, execute the following command at the root of the project:
 ```
 $ docker-compose exec movies pytest -p no:warnings --cov=.
 ```
@@ -65,7 +65,7 @@ TOTAL                       409     49     60     16    85%
 -----------------------------------------------------------
 ```
 
-To lint code and sort python imports:
+To lint the code and sort Python imports, run:
 ```
 $ docker-compose exec movies black --exclude=migrations .
 $ docker-compose exec movies isort .
