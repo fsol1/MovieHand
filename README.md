@@ -1,6 +1,8 @@
 # MovieHand - A Social Media Platform for Movie Enthusiasts
 MovieHand is a social media platform for movie enthusiasts to share and discover films. It was built using Django and React and follows a test-driven development approach. The app features a modern user interface designed with Tailwind CSS and utilizes a Postgres database hosted on Heroku. MovieHand is deployed using Docker and Docker Compose, ensuring efficient scalability. With its Instagram-like experience, it's the perfect destination for discovering and sharing movies with the community.
 
+**Note:** The production code may differ slightly from the codebase provided here. In order for the app to work properly, API keys must be set in certain files.
+
 ## Key Features
 
 - Leverages the TMDB API to provide a rich selection of movies to share and discover
