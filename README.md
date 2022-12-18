@@ -12,6 +12,10 @@ MovieHand is a social media platform for movie enthusiasts to share and discover
 - Features user profiles with likes, follows, and comments
 - Explore page for finding new posts and users to follow
 
+## Roadmap.txt
+
+I created the roadmap.txt file at the start of the project to outline the features I wanted to include in the app. Some of these features may have seemed challenging at the time, but I learned and successfully implemented them as I worked on the project. I made a conscious decision not to modify this file as I progressed, so that it would serve as a reference for the original vision for the app. The final product ended up being quite close to what was described in roadmap.txt.
+
 ## Technology Stack
 
 ### Frontend :
